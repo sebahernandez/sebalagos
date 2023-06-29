@@ -2,27 +2,24 @@
 import Card from "../components/Card.astro";
 import Footer from "../components/Footer.astro";
 import Layout from "../layouts/Layout.astro";
+import About from "../components/About.astro";
 ---
 
 <Layout title="Sebastián Lagos - UX/UI Developer Front-end">
-  <main>
-    <section class="container">
+  <main class="container mx-auto justify-center flex items-center">
+    <section class="flex justify-center">
       <Card />
+      <About />
     </section>
-    <Footer />
   </main>
+  <Footer />
 </Layout>
 
 <style>
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  main {
     position: relative;
     top: 0;
     left: 0;
-    width: 100vw;
     height: 100vh;
   }
 </style>

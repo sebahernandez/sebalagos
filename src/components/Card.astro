@@ -4,12 +4,18 @@ import localImage from "../assets/sebastian-lagos.jpg";
 const localAlt = "Sebastian Lagos - Dev Designer";
 ---
 
-<div class="card-container" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
+<div
+  class="card-container w-1/2"
+  data-tilt
+  data-tilt-glare
+  data-tilt-max-glare="0.2"
+>
   <span class="pro">DEV</span>
-  <Image class="round" src={localImage} alt={localAlt} width={150} />
-
-  <h1>Sebastian Lagos 🇨🇱</h1>
-  <h2>Developer Front-End</h2>
+  <div class="details flex flex-col justify-center items-center">
+    <Image class="round" src={localImage} alt={localAlt} width={150} />
+    <h1>Sebastian Lagos 🇨🇱</h1>
+    <h2>Developer Front-End</h2>
+  </div>
   <div class="buttons">
     <a
       href="https://www.linkedin.com/in/sebasti%C3%A1n-lagos-40b1331a5/"
@@ -27,19 +33,19 @@ const localAlt = "Sebastian Lagos - Dev Designer";
     </a>
   </div>
   <div class="skills">
-    <h6>Habilidades</h6>
+    <h6 class="pb-2">Habilidades</h6>
     <ul>
-      <li>UI / UX</li>
       <li>Shopify Liquid</li>
       <li>HTML 5</li>
-      <li>CSS CSS3</li>
+      <li>CSS3</li>
       <li>JavaScript (ES6)</li>
       <li>React Js</li>
       <li>Node Js</li>
+      <li>UI / UX</li>
       <li>Figma</li>
       <li>Adobe Suite</li>
     </ul>
-    <h6>Proyectos</h6>
+    <h6 class="pb-2">Proyectos</h6>
     <ul>
       <li>Weecost (JS)</li>
       <li>TODO (React)</li>
@@ -56,8 +62,8 @@ const localAlt = "Sebastian Lagos - Dev Designer";
     color: #b3b8cd;
     padding-top: 30px;
     position: relative;
-    width: 350px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 350px;
     text-align: center;
     transform-style: preserve-3d;
     transform: perspective(1000px);
@@ -75,20 +81,11 @@ const localAlt = "Sebastian Lagos - Dev Designer";
     left: 30px;
   }
 
-  .card-container .round {
-    border: 1px solid #03bfcb;
-    border-radius: 50%;
-    padding: 7px;
-    width: 150px;
-    transform: translateZ(40px);
-  }
-
   .ball {
     position: absolute;
     border-radius: 100%;
     opacity: 0.7;
     z-index: -1;
-    transform: translateZ(20px);
   }
 
   .card-container .round {
@@ -96,7 +93,6 @@ const localAlt = "Sebastian Lagos - Dev Designer";
     border-radius: 50%;
     padding: 7px;
     width: 150px;
-    transform: translateZ(20px);
   }
 
   a.primary {
@@ -147,11 +143,9 @@ const localAlt = "Sebastian Lagos - Dev Designer";
   h2 {
     transform: translateZ(20px);
   }
-  h1 {
-    margin: 0px;
-  }
-  h2 {
-    font-size: 16px;
+
+  .details {
+    transform: translateZ(20px);
   }
 </style>
 
